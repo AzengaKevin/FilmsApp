@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/filmsFragment">
+
+    <fragment
+        android:id="@+id/filmsFragment"
+        android:name="ke.co.propscout.filmsapp.ui.films.list.FilmsFragment"
+        android:label="@string/app_title"
+        tools:layout="@layout/films_fragment">
+        <action
+            android:id="@+id/action_add_film"
+            app:destination="@id/addFilmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFilmFragment"
+        android:name="ke.co.propscout.filmsapp.ui.films.add.AddFilmFragment"
+        android:label="@string/add_text"
+        tools:layout="@layout/add_film_fragment" />
+</navigation>

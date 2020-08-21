@@ -17,4 +17,7 @@
     <string name="sign_up_prompt">Don\t have an account?</string>
     <string name="sing_in_prompt">Already have an account?</string>
 
+    <string name="favorite_one_reminder">Your favorite One of Course…</string>
+    <string name="add_text">Add Film</string>
+
 </resources>

@@ -73,12 +73,14 @@
             app:layout_constraintBottom_toTopOf="@+id/register_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
+            app:passwordToggleEnabled="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/email_layout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password_field"
                 android:layout_width="match_parent"
+                android:inputType="textPassword"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:hint="@string/password_text" />
