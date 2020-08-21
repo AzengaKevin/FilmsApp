@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">FilmsApp</string>
+
+    <!--Splash Page-->
+    <string name="app_title">Films</string>
+    <string name="logo_icon">Logo</string>
+
+    <!--Authentication-->
+    <string name="sign_in_text">Sign In</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="name_text">Name</string>
+    <string name="email_text">Email</string>
+    <string name="password_text">Password</string>
+
+    <string name="login_text">Login</string>
+    <string name="register_text">Register</string>
+    <string name="sign_up_prompt">Don\t have an account?</string>
+    <string name="sing_in_prompt">Already have an account?</string>
+
 </resources>
