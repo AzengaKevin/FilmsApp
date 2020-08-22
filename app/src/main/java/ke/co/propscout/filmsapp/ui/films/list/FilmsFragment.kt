@@ -10,6 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import ke.co.propscout.filmsapp.R
 import ke.co.propscout.filmsapp.databinding.FilmsFragmentBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 const val TAG = "FilmsFragment"
 
@@ -45,5 +48,6 @@ class FilmsFragment : Fragment() {
 
         //Setup the view model
         Log.d(TAG, "onActivityCreated: called")
+
     }
 }
