@@ -3,6 +3,7 @@ package ke.co.propscout.filmsapp.data.network
 import android.content.Context
 import ke.co.propscout.filmsapp.data.network.interceptors.AuthInterceptor
 import ke.co.propscout.filmsapp.data.network.interceptors.ConnectivityInterceptor
+import ke.co.propscout.filmsapp.data.network.requests.AddFilmRequest
 import ke.co.propscout.filmsapp.data.network.requests.LoginRequest
 import ke.co.propscout.filmsapp.data.network.requests.RegisterRequest
 import ke.co.propscout.filmsapp.data.network.response.AddFilmResponse
@@ -32,10 +33,7 @@ interface FilmsApiService {
 
     @POST(FilmConstants.FILM_PATH)
     @Headers("Accept: application/json", "Content-Type: application/json")
-    fun addFilm(
-        @Field("email") email: String,
-        @Field("rating") rating: Int
-    ): Call<AddFilmResponse>
+    fun addFilm(@Body addFilmRequest: AddFilmRequest): Call<AddFilmResponse>
 
     companion object {
         operator fun invoke(context: Context): FilmsApiService {
