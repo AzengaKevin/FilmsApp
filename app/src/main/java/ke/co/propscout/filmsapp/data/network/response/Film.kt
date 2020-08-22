@@ -7,7 +7,7 @@ data class Film(
     @SerializedName("_id")
     val id: String,
     val name: String,
-    val rating: Int,
+    val rating: Double,
     @SerializedName("__v")
     val v: Int
 )

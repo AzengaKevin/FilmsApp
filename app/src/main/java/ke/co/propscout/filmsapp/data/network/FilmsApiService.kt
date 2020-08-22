@@ -4,6 +4,7 @@ import android.content.Context
 import ke.co.propscout.filmsapp.data.network.interceptors.AuthInterceptor
 import ke.co.propscout.filmsapp.data.network.interceptors.ConnectivityInterceptor
 import ke.co.propscout.filmsapp.data.network.requests.LoginRequest
+import ke.co.propscout.filmsapp.data.network.requests.RegisterRequest
 import ke.co.propscout.filmsapp.data.network.response.AddFilmResponse
 import ke.co.propscout.filmsapp.data.network.response.Film
 import ke.co.propscout.filmsapp.data.network.response.LoginResponse
@@ -18,15 +19,12 @@ import retrofit2.http.*
 interface FilmsApiService {
 
     @GET(FilmConstants.FILM_PATH)
+    @Headers("Accept: application/json")
     fun getAllFilms(): Call<List<Film>>
 
     @POST(FilmConstants.REGISTER_PATH)
     @Headers("Accept: application/json", "Content-Type: application/json")
-    fun registerUser(
-        @Field("name") name: String,
-        @Field("email") email: String,
-        @Field("password") password: String
-    ): Call<RegisterResponse>
+    fun registerUser(@Body registerRequest: RegisterRequest): Call<RegisterResponse>
 
     @POST(FilmConstants.LOGIN_PATH)
     @Headers("Accept: application/json", "Content-Type: application/json")
